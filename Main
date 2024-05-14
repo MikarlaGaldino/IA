@@ -1,0 +1,26 @@
+public class Main {
+    // Método para decidir se uma pessoa deve levar um guarda-chuva com base na previsão do tempo
+    public static boolean decidirGuardaChuva(String previsaoTempo) {
+        // Verificando se a previsão do tempo indica chuva
+        if (previsaoTempo.equalsIgnoreCase("chuva") || previsaoTempo.equalsIgnoreCase("tempo chuvoso")) {
+            return true; // Se a previsão indicar chuva, a pessoa deve levar um guarda-chuva
+        } else {
+            return false; // Se não, não é necessário levar um guarda-chuva
+        }
+    }
+
+    public static void main(String[] args) {
+        String previsaoTempoHoje = "tempo ensolarado"; // Previsão do tempo para hoje
+
+        // Chamando o método para decidir se a pessoa deve levar um guarda-chuva com base na previsão do tempo
+        boolean levarGuardaChuva = decidirGuardaChuva(previsaoTempoHoje);
+
+        // Imprimindo a decisão
+        if (levarGuardaChuva) {
+            System.out.println("É recomendado levar um guarda-chuva hoje.");
+        } else {
+            System.out.println("Não é necessário levar um guarda-chuva hoje.");
+        }
+    }
+}
+M
